@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavArt Studio</title>
+    <link rel="icon" type="image/png" href="Icono.png">
+    
+    <!-- Fuente de la letra de la portada -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- enlace al archivo css --> 
+    <link rel="stylesheet" href="Diseño.css">
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+<nav>
+    <div class="nav-links">
+        <a href="#Inicio">Inicio</a>
+        <a href="#Info">Informacion</a>
+        <a href="#Juegos">Juegos</a>
+    </div>
+
+    <!-- Botón de Notificaciones con la Campana (Redirige a Noti.html) -->
+    <a href="Noti.html" class="notification-btn" id="notificationBtn" title="Notificaciones">
+        <svg class="bell-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+        <span class="notification-badge"></span>
+    </a>
+</nav>
+
+    <!-- Sección 1: Inicio -->
+
+<header class="hero" id="Inicio">
+    <div class="hero-content">
+        <h1 class="glitch-title" data-text="NavArt Studio">
+            <span class="highlight-brand">NavArt</span><br>Studio
+        </h1>
+        
+        <!-- Texto con efecto tipo maquina de escribir dinamica -->
+        <p class="hero-subtitle">Desarrollo <span class="typing-text"></span></p>
+
+        <div class="hero-buttons">
+            <a href="Index2.html" class="btn btn-glow">Todo sobre nosotros</a>
+        </div>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.youtube.com/channel/UCuYMDWeqTE8IVF-oK0vZDHw" target="_blank">Youtube</a>
+        <a href="https://www.tiktok.com/@navartstudio" target="_blank">Tiktok</a>
+        <a href="https://linkedin.com" target="_blank">Instagram</a>
+    </div>
+</header>
+
+   <!-- Sección 2: Informacion -->
+
+    <section class="about" id="Info">
+        <div class="about-text-card">
+            <span class="section-tag">Todos nuestros servicios:</span>
+            <h2 class="about-title">Secciones disponibles <br><span class="highlight-text">(Por ahora)</span></h2>
+            
+            <ul class="about-list">
+                <li>
+                    <span class="list-icon">◈</span>
+                    <div class="list-content">
+                        <strong>Juegos Recreativos</strong>
+                        <p>Títulos enfocados en la diversión pura, acción y mecánicas únicas.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="about-image">
+            <img src="JuegoClubDeEscritura.jpeg" alt="NavArt Studio">
+        </div>
+    </section>
+
+    <!-- Sección 3: Juegos Disponibles -->
+
+    <section class="details-section" id="Juegos">
+        <h1>Juegos disponibles</h1>
+
+<!-- Juego 1 -->
+        <div class="game-card">
+    <img src="JuegoElCorredor.png" alt="Club de escritura" class="game-img">
+    <div class="game-content">
+        <div>
+            <div class="game-title">Gato Corredor</div>
+            <div class="game-desc">Aprende y estudia desde lo más básico de la escritura hasta lo más complejo.</div>
+        </div>
+       <a href="GatoCorredor.html" class="download-btn">Descargar</a>
+    </div>
+</div>
+
+        
+    </section>
+
+
+    <!-- Enlace al archivo JS -->
+    <script src="Codigo.js"></script>
+</body>
+</html>

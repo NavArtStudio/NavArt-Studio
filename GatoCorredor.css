@@ -1,0 +1,253 @@
+/* --- ANIMACIONES --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Imagen de fondo */
+    background-image: url('fondo.jpe'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 30px 20px;
+}
+
+/* BOTÓN DE REGRESAR FLOTANTE Y FIJO */
+.regresar-btn {
+    position: fixed; /* Lo fija a la ventana del navegador */
+    top: 20px;       /* Distancia desde arriba */
+    left: 20px;      /* Distancia desde la izquierda */
+    z-index: 1000;   /* Asegura que siempre esté por encima de todo lo demás */
+    
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ffe600, #ffb700);
+    color: #111;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #111;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(255, 230, 0, 0.4), 4px 4px 0px #111;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Efecto al pasar el mouse */
+.regresar-btn:hover {
+    background: linear-gradient(135deg, #fff033, #ffd000);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 230, 0, 0.6), 6px 6px 0px #111;
+}
+
+/* Efecto al hacer clic */
+.regresar-btn:active {
+    transform: translateY(2px) scale(0.98);
+    box-shadow: 0 2px 5px rgba(255, 230, 0, 0.4), 2px 2px 0px #111;
+}
+
+/* Animación de la flechita */
+.regresar-btn .flecha {
+    transition: transform 0.3s ease;
+}
+
+.regresar-btn:hover .flecha {
+    transform: translateX(-5px);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.100); /* Transparencia de la hoja */
+    backdrop-filter: blur(5px); /* Efecto cristal borroso */
+    padding: 35px;
+    border: 3px solid #111;
+    border-radius: 12px;
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.8);
+    animation: fadeInUp 0.7s ease-out;
+}
+
+/* ENCABEZADO CON DETALLE AMARILLO */
+.main-header {
+    border: 3px solid #111;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-top: 8px solid #ffe600; /* Barra superior amarilla */
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.main-header:hover {
+    transform: translateY(-3px);
+}
+
+.main-header h1 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+.main-header p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444;
+}
+
+/* ESTRUCTURA */
+.grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+/* BLOQUES DE TEXTO CON HOVER Y DETALLES */
+.text-block {
+    border: 3px solid #111;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.text-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 0px #ffe600; /* Sombra amarilla al pasar el mouse */
+    border-color: #111;
+}
+
+.text-block h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    border-bottom: 3px solid #ffe600; /* Subrayado amarillo */
+    padding-bottom: 6px;
+    color: #111;
+}
+
+.text-block p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* BLOQUES DE IMAGEN CON ANIMACIÓN AL PASAR EL MOUSE */
+.image-block {
+    border: 3px solid #111;
+    border-radius: 8px;
+    background-color: rgba(240, 240, 240, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 230px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.image-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 0px #111;
+}
+
+.image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.image-block:hover img {
+    transform: scale(1.05); /* Hace zoom suave a la imagen */
+}
+
+/* CONTENEDORES DE DESCARGAS */
+.sub-content {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna (hacia abajo) */
+    align-items: flex-start; /* Los alinea a la izquierda de forma ordenada */
+    gap: 15px; /* Espacio separador entre cada elemento/botón */
+    margin-top: 10px;
+}
+
+/* Contenedor de la lista de botones */
+.lista-descargas {
+    display: flex;
+    flex-direction: column; /* Asegura que vayan uno debajo de otro */
+    gap: 10px;              /* Espacio entre botón y botón */
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilo para los botones de versión */
+.download-btn-version {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background: #ffe600;
+    color: #111;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid #111;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0px #111;
+    transition: all 0.2s ease;
+}
+
+.download-btn-version:hover {
+    background: #fff033;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0px #111;
+}
+
+.mini-img-box {
+    width: 110px;
+    height: 80px;
+    border: 2px solid #111;
+    border-radius: 6px;
+    background: rgba(230, 230, 230, 0.8);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.mini-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .grid-row {
+        grid-template-columns: 1fr;
+    }
+}

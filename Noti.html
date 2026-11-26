@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavArt Studio - Panel de Control</title>
+    <link rel="icon" type="image/png" href="Icono.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="NotiDiseño.css">
+</head>
+<body>
+
+    <div class="app-fullscreen">
+        <!-- Menú Lateral Izquierdo -->
+        <aside class="sidebar">
+            <div class="brand-logo">
+                <span class="highlight">NavArt</span> Studio
+            </div>
+
+            <nav class="sidebar-menu">
+                <!-- Botón 1: Regresar -->
+                <a href="index.html" class="menu-item back-btn">
+                    <span class="icon">⬅</span>
+                    <span>Regresar</span>
+                </a>
+
+                <!-- Botón 2: Notificaciones -->
+                <button class="menu-item active" data-tab="tab-noti" id="btnNoti">
+                    <span class="icon">🔔</span>
+                    <span>Notificaciones</span>
+                    <span class="badge red" id="badgeNoti">3</span>
+                </button>
+
+                <!-- Botón 3: Actualizaciones -->
+                <button class="menu-item" data-tab="tab-actu" id="btnActu">
+                    <span class="icon">🚀</span>
+                    <span>Actualizaciones</span>
+                    <span class="badge yellow" id="badgeActu">NUEVO</span>
+                </button>
+
+                <!-- Botón 4: Futuros Proyectos -->
+                <button class="menu-item" data-tab="tab-proyectos">
+                    <span class="icon">🛠️</span>
+                    <span>Futuros Proyectos</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Área de Contenido Principal -->
+        <main class="content-area">
+
+            <!-- SECCIÓN 1: NOTIFICACIONES -->
+            <section id="tab-noti" class="tab-content active">
+                <div class="content-header">
+                    <h2>Notificaciones</h2>
+                    <p>Mantente al tanto de los mensajes y avisos importantes.</p>
+                </div>
+
+                <div class="noti-card unread" data-id="noti-2">
+                        <div class="noti-icon">🐈</div>
+                        <div class="noti-info">
+                            <h3>Gato Corredor</h3>
+                            <p>Nuestro primer juego esta listo para jugar! Vercion 1.0.0 esta creada
+                                completamente y funcional, Descargalo y disfrutalo :D
+                            </p>
+                            <span class="noti-time" data-time="">Descagalo en la seccion de juegos!</span>
+                        </div>
+                    </div>
+
+                    <div class="noti-card unread" data-id="noti-2">
+                        <div class="noti-icon">⭐</div>
+                        <div class="noti-info">
+                            <h3>Comunidad en crecimiento</h3>
+                            <p>estamos trabajando para dar una buena experiencia en el mundo de los videojuegos. :3</p>
+                            <span class="noti-time" data-time="">Siguenos y apoyanos en nuestras redes sociales :3</span>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- SECCIÓN 2: ACTUALIZACIONES -->
+            <section id="tab-actu" class="tab-content">
+                <div class="content-header">
+                    <h2>Historial de Actualizaciones</h2>
+                    <p>Notas de parches, mejoras y novedades en nuestros videojuegos.</p>
+                </div>
+
+            </section>
+
+            <!-- SECCIÓN 3: FUTUROS PROYECTOS -->
+            <section id="tab-proyectos" class="tab-content">
+                <div class="content-header">
+                    <h2>Futuros Proyectos</h2>
+                    <p>Haz clic en cualquier proyecto para ver la información detallada.</p>
+                </div>
+
+                <div class="cards-list">
+                    <!-- Proyecto 2 -->
+
+                    <div class="noti-card project-card" 
+                         data-title="Club de escritura"
+                         data-tag="En Desarrollo Activo"
+                         data-progress="0%"
+                         data-desc="El club de escritura se esta creando con el proposito de darle un poco mas de dinamica y divercion al aprendizaje sobre la escritura y gramatica"
+                         data-features="Juego 2D donde varios adolecentes te enseñaran de lo ams basico hasta lo mas complejo de la escritura."
+                         data-status="pruebas internas y en desarrollo">
+                        <div class="noti-icon">📕</div>
+                        <div class="noti-info">
+                            <h3>CLub de escritura</h3>
+                            <p>escritura, gramatica y aprendizaje para niños, niñas y adolecentes interesados
+                                en aprender sobre la escritura.
+                            </p>
+                            <span class="project-click-hint">Haz clic para ver más detalles ➔</span>
+                        </div>
+                    </div>
+
+                     <!-- Proyecto 1 -->
+                      
+                    <div class="noti-card project-card" 
+                         data-title="Gato Corredor"
+                         data-tag="terminado"
+                         data-progress="100%"
+                         data-desc="La primera vercion del Gato Corredor es para probar funciones, mecanicas como la tienda, dificultad, etc."
+                         data-features="Juego 2D donde debes desafiar tus reflejos y esquivar obstaculos."
+                         data-status="Vercion 1.0.0 terminado">
+                        <div class="noti-icon">🐈</div>
+                        <div class="noti-info">
+                            <h3>Gato Corredor 1.0.0</h3>
+                            <p>Desafio, reto y entretenimiento. Logra conseguir el mayor record
+                                entre tus amigos!
+                            </p>
+                            <span class="project-click-hint">Haz clic para ver más detalles ➔</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- PANTALLA MODAL GRANDE DE INFORMACIÓN DEL PROYECTO -->
+    <div class="project-modal-overlay" id="projectModal">
+        <div class="project-modal-container">
+            <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag" id="modalTag">PROYECTO</span>
+                <h1 id="modalTitle">Nombre del Proyecto</h1>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Descripción General</h3>
+                    <p id="modalDesc">Descripción del proyecto...</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Progreso de Desarrollo</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="modalProgressBar"></div>
+                    </div>
+                    <span class="progress-value" id="modalProgressText">0%</span>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Características Principales</h3>
+                    <ul class="modal-features-list" id="modalFeatures">
+                        <!-- Se llena dinámicamente con JS -->
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Estado Actual</h3>
+                    <p class="modal-status-highlight" id="modalStatus">Estado del proyecto...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="NotiCodigo.js"></script>
+</body>
+</html>
