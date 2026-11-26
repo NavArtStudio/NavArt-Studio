@@ -1,0 +1,88 @@
+Actualizaciones:
+
+                <div class="timeline" id="listActu">
+                    <div class="update-card" data-id="actu-1">
+                        <div class="update-tag">vercion</div>
+                        <h3>titulo</h3>
+                        <ul>
+                            <li>punto 1</li>
+                            <li>punto 2</li>
+                            <li>punto 3</li>
+                        </ul>
+                        <span class="noti-time" data-time="2026-10-25T13:30:00">Calculando tiempo...</span>
+                    </div>
+
+tarjetas de juegos: 
+
+<!-- Juego x -->
+         <div class="game-card">
+    <img src="portada.jpg" alt="Club de escritura" class="game-img">
+    <div class="game-content">
+        <div>
+            <div class="game-title">Club de escritura / Demo</div>
+            <div class="game-desc">Aprende y estudia desde lo más básico de la escritura hasta lo más complejo.</div>
+        </div>
+       <a href="ClubDeEscritura/pagina.html" class="download-btn">Abrir Demo</a>
+    </div>
+</div>
+
+botones de servicios apgina webs 
+
+<div class="bloque-modificar">
+                        <button id="btnModificar" class="btn-estilo-regresar">Modificar</button>
+                        
+                        <!-- Cuadro interactivo de confirmación -->
+                        <div id="cuadroEstado" class="cuadro-confirmacion">
+                            <span id="textoEstado">Rechazado</span>
+                        </div>
+                    </div>
+
+                    <div class="bloque-modificar">
+                        <button id="btnModificar" class="btn-estilo-regresar">Modificar</button>
+                        
+                        <!-- Cuadro interactivo de confirmación -->
+                        <div id="cuadroEstado" class="cuadro-confirmacion">
+                            <span id="textoEstado">Rechazado</span>
+                        </div>
+                    </div>
+
+
+                    
+    <!-- Sección 4: servicios -->
+    <section class="details-section2" id="Servicios">
+        <h1>Juegos disponibles</h1> 
+
+        <!-- Servicio 1 -->
+
+          <div class="game-card">
+    <img src="PaginaWeb.jpe" alt="Club de escritura" class="game-img">
+    <div class="game-content">
+        <div>
+            <div class="game-title">Creacion de paginas web</div>
+            <div class="game-desc">Puedes solicitarnos la creación de una página web
+                 a un precio accesible y adaptado a tu presupuesto, ya sea mediante 
+                 plantillas prediseñadas o con un método de personalización a tu medida.
+            </div>
+        </div>
+       <a href="" class="download-btn">Ver planes y precios</a>
+    </div>
+</div>
+
+<!-- Servicio 2 -->
+
+          <div class="game-card">
+    <img src="publicidadimagen.webp" alt="Club de escritura" class="game-img">
+    <div class="game-content">
+        <div>
+            <div class="game-title">Publicidad</div>
+            <div class="game-desc">Puedes solicitarnos el desarrollo de alguna publicidad 
+                que necesite tu negocio.
+            </div>
+        </div>
+       <a href="ServicioPublicidad/pagina.html" class="download-btn">Ver planes y precios</a>
+    </div>
+</div>
+
+
+
+    </section>
